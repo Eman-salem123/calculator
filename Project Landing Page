@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Project Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+        }
+        .intro {
+            background-color: #f4f4f4;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .intro h1 {
+            font-size: 2.5em;
+        }
+        .intro p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .intro button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .features, .about {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .features div, .about div {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 15px;
+            text-align: center;
+        }
+        .features img, .about img {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro" id="intro">
+        <img src="#" alt="Project Image" style="width:100%; height: 300px;">
+        <h1>My Portfolio Project</h1>
+        <p>A brief description of the project in one line</p>
+        <button>View Project</button>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div>
+            <img src="#" alt="Feature 1">
+            <h2>Feature 1</h2>
+            <p>Description of Feature 1</p>
+        </div>
+        <div>
+            <img src="#" alt="Feature 2">
+            <h2>Feature 2</h2>
+            <p>Description of Feature 2</p>
+        </div>
+        <div>
+            <img src="#" alt="Feature 3">
+            <h2>Feature 3</h2>
+            <p>Description of Feature 3</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div>
+            <img src="#" alt="About Project">
+            <h2>About the Project</h2>
+            <p>Inspiration and story behind the project. Include timeline and personal motivation.</p>
+        </div>
+        <div>
+            <h2>Contact</h2>
+            <p>Links to GitHub, LinkedIn, and other profiles.</p>
+            <a href="#">GitHub</a><br>
+            <a href="#">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 My Portfolio Project</p>
+    </footer>
+
+</body>
+</html>
