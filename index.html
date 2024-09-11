@@ -4,133 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Calculator</title>
+    <title>Portfolio Landing Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Styles */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
         }
+        body {
+            background-color: #f0f2f5;
+        }
+        
+        /* Header */
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background-color: #333;
-            color: rgb(206, 202, 202);
-            padding: 20px;
-            text-align: center;
+            color: white;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
         }
         header nav a {
             margin: 0 15px;
             color: white;
             text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
-        section {
-            padding: 20px;
+        header nav a:hover {
+            color: #00aaff;
         }
+
+        /* Intro Section */
         .intro {
-            background-color: #f4f4f4;
-            padding: 50px 20px;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('#') center/cover no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
         }
         .intro h1 {
-            font-size: 2.5em;
+            font-size: 4em;
+            margin-bottom: 15px;
         }
         .intro p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 30px;
         }
         .intro button {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #333;
-            color: rgb(255, 255, 255);
+            padding: 15px 30px;
+            font-size: 1.2em;
             border: none;
+            background-color: #00aaff;
+            color: white;
             cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s;
         }
-        .features, .about {
+        .intro button:hover {
+            background-color: #008fcc;
+        }
+
+        /* Features Section */
+        .features {
             display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: white;
         }
-        .features div, .about div {
+        .feature {
             width: 30%;
-            background-color: #ffffff;
-            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .features img, .about img {
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .feature img {
             width: 100%;
             height: 150px;
-            background-color: #ffffff;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
-        footer {
+
+        /* About Section */
+        .about {
+            padding: 50px;
+            background-color: #f0f0f5;
             text-align: center;
-            padding: 20px;
+        }
+        .about h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
             background-color: #333;
             color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Scroll Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <nav>
             <a href="#intro">Home</a>
-            <a href="#Arithmetic operations">Arithmetic operations</a>
+            <a href="#features">Features</a>
             <a href="#about">About</a>
         </nav>
     </header>
 
     <!-- Intro Section -->
     <section class="intro" id="intro">
-        <img src="https://ar.pngtree.com/freepng/image-of-calculator-vector-or-color-illustration_5274658.html" alt="Project Image" style="width:100%; height: 300px;">
-        <h1>My Calculator</h1>
-        <p>This project is for calculating arithmetic operations</p>
-        <button>Enter</button>
+        <div>
+            <h1>Welcome to My Project</h1>
+            <p>A short, catchy description of your project</p>
+            <button onclick="scrollToSection('features')">Explore Features</button>
+        </div>
     </section>
 
     <!-- Features Section -->
-    <section class="Arithmetic operations" id="Arithmetic operations">
-        <div>
-            <img src="https://www.pngegg.com/ar/png-yyhuy" alt="Addition">
-            <h2>Addition</h2>
-            <p>To add numbers</p>
+    <section class="features" id="features">
+        <div class="feature scroll-reveal">
+            <img src="#" alt="Feature 1">
+            <h2>Feature 1</h2>
+            <p>Brief description of the first feature.</p>
         </div>
-        <div>
-            <img src="https://www.pngegg.com/ar/png-mouns" alt="Subtraction">
-            <h2>Subtraction</h2>
-            <p>Description of Feature 2</p>
+        <div class="feature scroll-reveal">
+            <img src="#" alt="Feature 2">
+            <h2>Feature 2</h2>
+            <p>Brief description of the second feature.</p>
         </div>
-        <div>
-            <img src="https://www.pngegg.com/ar/png-ynjtw" alt="Division">
-            <h2>Division</h2>
-            <p>Description of Feature 3</p>
-        </div>
-        <div>
-            <img src="https://www.pngegg.com/ar/png-ppnvd" alt="Multiplication">
-            <h2>Multiplication</h2>
-            <p>Description of Feature 3</p>
+        <div class="feature scroll-reveal">
+            <img src="#" alt="Feature 3">
+            <h2>Feature 3</h2>
+            <p>Brief description of the third feature.</p>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div>
-            <img src="#" alt="About Project">
-            <h2>About the Project</h2>
-            <p>Inspiration and story behind the project. Include timeline and personal motivation.</p>
-        </div>
-        <div>
-            <h2>Contact</h2>
-            <p>Links to GitHub, LinkedIn</p>
-            <a href="#">GitHub</a><br>
-            <a href="#">LinkedIn</a>
-        </div>
+        <h2>About the Project</h2>
+        <p>This project was inspired by [insert your inspiration here]. It reflects my personal journey as a developer, and I'm excited to share it with you.</p>
+        <p>Connect with me on <a href="#">GitHub</a> and <a href="#">LinkedIn</a>.</p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2024 My Portfolio Project</p>
     </footer>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const revealPoint = 150;
+
+                if (elementTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        });
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 </html>
