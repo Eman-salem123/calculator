@@ -14,7 +14,7 @@
 - [Technologies Used](#technologies-used)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
-- [Author](#author)
+- [Author](#author
 
 ## Overview
 
